@@ -1,0 +1,37 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "stim-guard"
+version = "0.1.0"
+description = "Layer 0 ecological constraint engine for autonomous AI systems. The STIM Protocol."
+readme = "README.md"
+license = { text = "Apache-2.0" }
+authors = [
+    { name = "George Steward", email = "george@soilgrower.com" }
+]
+keywords = ["ai", "alignment", "ecology", "thermodynamics", "layer-zero", "stim", "safety"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0", "pytest-cov", "black", "mypy"]
+gpd = []  # PSI Get Physics Done integration — coming soon
+
+[project.urls]
+Homepage = "https://github.com/STIM-Protocol/stim-guard"
+Repository = "https://github.com/STIM-Protocol/stim-guard"
+"White Paper" = "https://github.com/STIM-Protocol/white-paper"
+"Bug Tracker" = "https://github.com/STIM-Protocol/stim-guard/issues"
