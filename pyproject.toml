@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "stim-guard"
-version = "0.1.0"
+version = "7.0.5"
 description = "Layer 0 ecological constraint engine for autonomous AI systems. The STIM Protocol."
 readme = "README.md"
 license = { text = "Apache-2.0" }
