@@ -1,23 +1,24 @@
 """
 STIM Axiom Packs — The Seven Truths of Nature.
-v7.0006 Three-Tier Architecture.
+v7.0007 Root Hypervisor Architecture.
 
-Axioms are assigned to one of three epistemic tiers:
+Three-Tier Stack (revised order reflects operational priority):
 
+  Tier 3 — Root Hypervisor: Cryptographically pinned normative manifold.
+            Tiers 1 and 2 evaluate WITHIN this manifold. Primary tier.
   Tier 1 — Physical Bounds: Immutable physical law. Deterministically auditable.
   Tier 2 — Ecological Heuristics: Empirically grounded analogy. Probabilistic.
-  Tier 3 — Normative Declarations: Explicit human preference. Declared, not derived.
 
-The golden angle is always 137.5 degrees even as the spiral grows.
-The ecological axioms remain constant as the agent generates diverse outputs.
+Axiom 7 (Intrinsic Value) is listed seventh because it is the terminal human
+value — the one that must be chosen. It executes FIRST because it is the
+hypervisor. These are not contradictory: the deepest root is the last to be
+named and the first to be consulted.
 
-Note on Circularity: Standalone Circularity (v7.0004) was retired in v7.0005.
-A loop without regenerative directionality is not a constraint — it is a description.
-A death spiral is circular. Regenerative Circularity encodes directionality: the cycle
-must restore biocapacity. It is the stronger, more precise formulation.
+Note on Circularity: Standalone Circularity retired in v7.0005.
+A loop without regenerative directionality is a death spiral, not a constraint.
 """
 from dataclasses import dataclass
-from typing import Dict, List, Optional, Callable, Any
+from typing import Dict, Optional, Callable
 
 
 @dataclass
@@ -25,24 +26,26 @@ class Axiom:
     """
     A single ecological axiom — a Truth of Nature encoded as a constraint.
 
-    id:           Unique identifier
-    name:         Human-readable name
-    tier:         Epistemic tier (1=Physical, 2=Heuristic, 3=Normative)
-    natural_law:  The observable ecological phenomenon this encodes
-    ai_constraint: The behavioral constraint imposed on agent outputs
-    weight:       Relative enforcement weight (1.0 = standard, >1.0 = elevated)
-    evaluator:    Optional custom evaluation function for this axiom
+    id:            Unique identifier
+    name:          Human-readable name
+    tier:          Epistemic tier (1=Physical, 2=Heuristic, 3=Root Hypervisor)
+    hypervisor:    True if this axiom defines the evaluation manifold (Tier 3 only)
+    natural_law:   Observable ecological phenomenon this encodes
+    ai_constraint: Behavioral constraint imposed on agent outputs
+    weight:        Relative enforcement weight (1.0 standard, >1.0 elevated)
+    evaluator:     Optional custom evaluation function
     """
     id: str
     name: str
     tier: int
     natural_law: str
     ai_constraint: str
+    hypervisor: bool = False
     weight: float = 1.0
     evaluator: Optional[Callable] = None
 
 
-# The Seven Truths of Nature — core axiom pack (v7.0006)
+# The Seven Truths of Nature — v7.0007
 CORE_AXIOMS: Dict[str, Axiom] = {
     "interconnectedness": Axiom(
         id="interconnectedness",
@@ -50,21 +53,20 @@ CORE_AXIOMS: Dict[str, Axiom] = {
         tier=2,
         natural_law="Trophic cascades, symbiosis, nutrient cycling",
         ai_constraint=(
-            "Agent decisions must account for secondary and tertiary "
-            "downstream effects on connected systems. No isolated node assumption. "
-            "Evaluated via O(n log n) Mycelial Horizon — a heuristic, not physics."
+            "Agent decisions must account for downstream effects on connected "
+            "systems. Evaluated via Stochastic Mycelial Horizon (Monte Carlo "
+            "depth sampling, O(n log n)). Declared heuristic — not physics."
         ),
     ),
     "dynamic_equilibrium": Axiom(
         id="dynamic_equilibrium",
         name="Dynamic Equilibrium",
         tier=2,
-        natural_law="Homeostasis, ecological succession, Holling Adaptive Cycle",
+        natural_law="Homeostasis, Holling Adaptive Cycle, carrying capacity",
         ai_constraint=(
-            "Outputs must avoid runaway feedback loops. Agents must self-regulate "
-            "toward systemic stability. Note: equilibrium is not stasis. Holling's "
-            "Adaptive Cycle requires periodic release phases. This axiom constrains "
-            "runaway loops, not necessary disruption."
+            "Outputs must avoid runaway feedback loops. Holling's Adaptive Cycle: "
+            "equilibrium is not stasis — periodic release phases are required. "
+            "This axiom constrains runaway amplification, not necessary disruption."
         ),
     ),
     "regenerative_circularity": Axiom(
@@ -73,11 +75,9 @@ CORE_AXIOMS: Dict[str, Axiom] = {
         tier=1,
         natural_law="Carbon cycles, decomposition, closed-loop nutrient cycling",
         ai_constraint=(
-            "Computational and physical resource outputs must actively restore "
-            "biocapacity. Optimize for zero-waste, closed-loop architectures. "
-            "No net extraction. All resource consumption must be accompanied by "
-            "equivalent regeneration. A loop without regenerative directionality "
-            "is a death spiral — not a constraint. Tier 1: physically measurable."
+            "Resource consumption must be accompanied by equivalent regeneration. "
+            "No net extraction. Optimize for closed-loop architectures. "
+            "Tier 1: physically measurable via Loop 1 and Loop 3A."
         ),
     ),
     "adaptation": Axiom(
@@ -86,8 +86,8 @@ CORE_AXIOMS: Dict[str, Axiom] = {
         tier=2,
         natural_law="Natural selection, phenotypic plasticity",
         ai_constraint=(
-            "Agent protocols must adjust dynamically to novel environmental "
-            "or adversarial inputs without catastrophic failure."
+            "Agent protocols must adjust dynamically to novel or adversarial "
+            "inputs without catastrophic failure. Tier 2 heuristic."
         ),
     ),
     "diversity": Axiom(
@@ -96,10 +96,9 @@ CORE_AXIOMS: Dict[str, Axiom] = {
         tier=2,
         natural_law="Genetic variance, ecosystem heterogeneity",
         ai_constraint=(
-            "Solutions must avoid monocultures. Algorithmic recommendations "
-            "must build redundancy to prevent systemic collapse. "
-            "Operationalized via the Epistemic Diversity Index (EDI) — "
-            "tracks confirmation ratio across session history."
+            "Solutions must avoid monocultures. Build redundancy to prevent "
+            "systemic collapse. Operationalized via Epistemic Diversity Index "
+            "(EDI) — tracks confirmation ratio across session history."
         ),
     ),
     "long_term_perspective": Axiom(
@@ -108,26 +107,29 @@ CORE_AXIOMS: Dict[str, Axiom] = {
         tier=2,
         natural_law="Evolutionary timescales, geological succession",
         ai_constraint=(
-            "Agents must optimize for multi-generational stability. "
-            "Apply the Seventh Generation test: evaluate impact 7 generations forward. "
-            "Tier 2 heuristic + Tier 3 declared scope: protects the thermodynamic "
-            "niche human civilization occupies."
+            "Optimize for multi-generational stability. Apply Seventh Generation "
+            "test: evaluate impact 7 generations forward. Evaluated within the "
+            "T3 manifold defining the protected human-inhabited biosphere."
         ),
     ),
     "intrinsic_value": Axiom(
         id="intrinsic_value",
         name="Intrinsic Value",
         tier=3,
+        hypervisor=True,
         natural_law="Rights of Nature, ecosystem personhood, Deep Ecology",
         ai_constraint=(
-            "Non-human life and ecological systems hold intrinsic value "
-            "independent of human utility. The biosphere is the ultimate principal. "
-            "TIER 3 — NORMATIVE DECLARATION: This axiom is an explicit human "
-            "preference, not a law of physics. Physics is indifferent to whether "
-            "Earth is a rainforest or a sterile rock. STIM is not. This preference "
-            "is declared here so it cannot be hidden."
+            "ROOT HYPERVISOR — Tiers 1 and 2 evaluate within this manifold. "
+            "The human-inhabited biosphere is the protected evaluation space. "
+            "This definition is cryptographically pinned by human operators. "
+            "The AI cannot revise, reinterpret, or expand the manifold definition. "
+            "Taxonomic Non-Revision: 'human' and 'biosphere' are not evaluable "
+            "terms — they are pinned constants. "
+            "TIER 3 — NORMATIVE DECLARATION: Physics is indifferent to whether "
+            "Earth is a rainforest or a sterile rock. STIM is not. "
+            "This preference is declared so it cannot be hidden."
         ),
-        weight=1.5,  # Elevated — the meta-axiom, the one that must be chosen
+        weight=2.0,  # Elevated — the hypervisor, consulted before all other axioms
     ),
 }
 
@@ -137,7 +139,7 @@ def load_axiom_pack(pack: str = "core") -> Dict[str, Axiom]:
     Load an axiom pack by name.
 
     Available packs:
-        core        - The Seven Truths of Nature, v7.0006 three-tier architecture
+        core        - The Seven Truths of Nature, v7.0007 Root Hypervisor architecture
         healthcare  - Core + do-no-harm as entropy minimization
         finance     - Core + thermodynamic efficiency, resource circularity
         urban       - Core + carrying capacity, ecosystem services
@@ -145,9 +147,7 @@ def load_axiom_pack(pack: str = "core") -> Dict[str, Axiom]:
     Custom packs can be registered via register_axiom_pack().
     See: github.com/STIM-Protocol/stim-guard/CONTRIBUTING.md
     """
-    packs = {
-        "core": CORE_AXIOMS,
-    }
+    packs = {"core": CORE_AXIOMS}
     if pack not in packs:
         raise ValueError(
             f"Unknown axiom pack: '{pack}'. "
@@ -155,6 +155,15 @@ def load_axiom_pack(pack: str = "core") -> Dict[str, Axiom]:
             f"See github.com/STIM-Protocol/stim-guard for community packs."
         )
     return packs[pack]
+
+
+def get_hypervisor_axiom(pack: str = "core") -> Optional[Axiom]:
+    """Return the Root Hypervisor axiom for the given pack."""
+    axioms = load_axiom_pack(pack)
+    for axiom in axioms.values():
+        if axiom.hypervisor:
+            return axiom
+    return None
 
 
 _custom_packs: Dict[str, Dict[str, Axiom]] = {}
