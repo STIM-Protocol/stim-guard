@@ -8,7 +8,7 @@
 
 ## The Bridge (Formal Statement)
 
-From the STIM white paper (v7.0004, Section 3.2):
+From the STIM white paper (v7.0005, Section 3.2):
 
 ```
 Bits per Joule ∝ 1 / (val_bpb × energy_per_token)
@@ -162,7 +162,7 @@ to physics, not heuristics.
 Karpathy, A. (2025). autoresearch. GitHub: karpathy/autoresearch.
 Physical Superintelligence PBC. (2026). Get Physics Done (GPD).
   GitHub: psi-oss/get-physics-done. Apache 2.0.
-Steward, G. (2026). STIM White Paper v7.0004. STIM-Protocol/white-paper.
+Steward, G. (2026). STIM White Paper v7.0005. STIM-Protocol/white-paper.
 ```
 
 ---
