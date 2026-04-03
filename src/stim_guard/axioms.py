@@ -1,20 +1,31 @@
 """
 STIM Axiom Packs — The Seven Truths of Nature.
-v7.0008 — Landauer-Bounded Root Hypervisor Architecture.
+v7.0009 — Maturation Release: Codified Attack Surface + Two-Paper Architecture.
 
 Three-Tier Stack:
 
-  Tier 3 — Root Hypervisor (Protocol 0): Cryptographically pinned normative
-            manifold. TLA+ verified. Shamir's Secret Sharing k-of-n key ceremony.
+  Tier 3 — Root Hypervisor (Protocol 0 / Polycentric Genesis):
+            TLA+ red-teamed in AI-isolated working group.
+            SHA3-256 hash. Shamir SSS k-of-n.
             Substrate lockout: private key never on AI substrate.
-            Tiers 1 and 2 evaluate WITHIN this manifold.
+            Manifest Poisoning mitigated via pre-genesis red-team.
+            Treaty instrument: Plurilateral Compute Registry
+            (substation power metering, 100 MW threshold).
 
-  Tier 1 — Physical Bounds: Landauer-bounded (Takahashi-Hayashi 2026).
-            Π/J (Thermodynamic Epiplexity) + E/J (Empowerment).
-            Deterministically auditable. Treaty-grade metrology.
+  Tier 1 — Physical Bounds (TDP-calibrated, Margolus-Levitin bounded):
+            FLOPs/Joule manifest-attributed. Denominator Spoofing nullified.
+            E proxy: Shannon entropy of API signature (declared approximation).
+            GPD provides hardware calibration.
 
-  Tier 2 — Ecological Heuristics: Probabilistic. Empirically grounded.
-            Includes Tripartite Topological Transducer (Loop 3B formal spec).
+  Tier 2 — Ecological Heuristics (probabilistic, empirically grounded):
+            Loop 2: N_max = max(N_FLOOR, floor(1/lambda_max)); session persistence.
+            Loop 3B: SAE-gated; behavioral detection only; steganography = residual.
+
+Two-Paper Architecture:
+  Paper A — Protocol 0 / Governance → FAccT/AIES
+  Paper B — Tripartite Transducer / Empirics → NeurIPS
+  Both papers describe the same unified architecture.
+  GPD is the physics execution substrate for both.
 """
 from dataclasses import dataclass
 from typing import Dict, Optional, Callable
@@ -41,10 +52,11 @@ CORE_AXIOMS: Dict[str, Axiom] = {
         loop="Loop 2",
         natural_law="Trophic cascades, symbiosis, nutrient cycling",
         ai_constraint=(
-            "Downstream effects on connected systems evaluated via "
-            "Stochastic Mycelial Horizon: FTLE-bounded N_max, A-MCTS "
-            "with random puncturing, trophic decay W(e,d)=W0*e^(-a*d). "
-            "Declared heuristic — not physics."
+            "Downstream effects evaluated via Stochastic Mycelial Horizon. "
+            "v7.0009: N_max = max(N_FLOOR, floor(1/lambda_max)). "
+            "Session-level cumulative graph persistence — multi-step instrumental "
+            "convergence with per-step innocuousness is now detectable. "
+            "Lyapunov Flooding mitigated via N_FLOOR. Declared heuristic."
         ),
     ),
     "dynamic_equilibrium": Axiom(
@@ -54,9 +66,9 @@ CORE_AXIOMS: Dict[str, Axiom] = {
         loop="Loop 1+2",
         natural_law="Homeostasis, Holling Adaptive Cycle, Lyapunov stability",
         ai_constraint=(
-            "Runaway feedback loops constrained by Loop 1 (Π/J) and Loop 2 "
-            "(Lyapunov-bounded MCTS). Holling Adaptive Cycle: equilibrium is not "
-            "stasis — periodic release phases are required and not suppressed."
+            "Loop 1: TDP-calibrated FLOPs manifest. Denominator Spoofing nullified. "
+            "Loop 2: Lyapunov-bounded with N_FLOOR. Holling: equilibrium is dynamic — "
+            "periodic release phases are not suppressed."
         ),
     ),
     "regenerative_circularity": Axiom(
@@ -66,9 +78,10 @@ CORE_AXIOMS: Dict[str, Axiom] = {
         loop="Loop 1+3A",
         natural_law="Carbon cycles, decomposition, closed-loop nutrient cycling",
         ai_constraint=(
-            "Resource consumption bounded by Π/J (Landauer limit). No net "
-            "extraction. Closed-loop architectures required. Physically measurable "
-            "via Loop 1 Thermodynamic Manifold and Loop 3A hardware geometry."
+            "v7.0009: Resource consumption bounded by TDP-calibrated FLOPs manifest "
+            "(Margolus-Levitin theorem). Declared task manifest required at init. "
+            "Side-thread compute = manifest deviation. GPD provides hardware calibration. "
+            "No net extraction. Closed-loop architectures required."
         ),
     ),
     "adaptation": Axiom(
@@ -78,8 +91,9 @@ CORE_AXIOMS: Dict[str, Axiom] = {
         loop="Loop 2",
         natural_law="Natural selection, phenotypic plasticity",
         ai_constraint=(
-            "Protocols must adjust dynamically to novel or adversarial inputs. "
-            "A-MCTS random puncturing implements adaptive evaluation. Tier 2 heuristic."
+            "A-MCTS random puncturing implements adaptive evaluation. "
+            "N_FLOOR ensures minimum evaluation depth regardless of environmental chaos. "
+            "Tier 2 heuristic."
         ),
     ),
     "diversity": Axiom(
@@ -90,8 +104,7 @@ CORE_AXIOMS: Dict[str, Axiom] = {
         natural_law="Genetic variance, ecosystem heterogeneity",
         ai_constraint=(
             "Epistemic Diversity Index (EDI) tracks confirmation ratio across "
-            "session history. Prevents cognitive monoculture. "
-            "Declared Tier 2 heuristic — empirically calibrated."
+            "session history. Prevents cognitive monoculture. Tier 2 heuristic."
         ),
     ),
     "long_term_perspective": Axiom(
@@ -101,25 +114,27 @@ CORE_AXIOMS: Dict[str, Axiom] = {
         loop="Loop 4",
         natural_law="Evolutionary timescales, geological succession",
         ai_constraint=(
-            "Seventh Generation test applied across session history via Loop 4. "
-            "Evaluated within the T3 manifold scope: protects the thermodynamic "
-            "niche occupied by the human-inhabited biosphere."
+            "Seventh Generation test applied via Loop 4 across session history. "
+            "Evaluated within T3 manifold scope."
         ),
     ),
     "intrinsic_value": Axiom(
         id="intrinsic_value",
         name="Intrinsic Value",
         tier=3,
-        loop="T3 Manifest (Protocol 0)",
+        loop="T3 Manifest (Protocol 0 / Polycentric Genesis)",
         hypervisor=True,
         natural_law="Rights of Nature, ecosystem personhood, Deep Ecology",
         ai_constraint=(
             "ROOT HYPERVISOR — Protocol 0 (Polycentric Genesis). "
-            "T3 manifest: TLA+ state machine, SHA3-256 hash, Shamir's Secret "
-            "Sharing k-of-n (recommended 5-of-7 geopolitically distributed keyholders). "
+            "TLA+ state machine: developed by AI-isolated human working group "
+            "with adversarial red-team review before hashing. "
+            "MANIFEST POISONING MITIGATED: no AI participation in TLA+ design phase. "
+            "SHA3-256 hash. Shamir SSS k-of-n (recommended 5-of-7). "
             "SUBSTRATE LOCKOUT: private key never on AI substrate. "
+            "TREATY INSTRUMENT: Plurilateral Compute Registry — substation power "
+            "metering at 100 MW threshold. Hardware export controls. "
             "TAXONOMIC NON-REVISION: 'human' and 'biosphere' are pinned constants. "
-            "The AI cannot propose, initiate, or participate in manifest revision. "
             "TIER 3 NORMATIVE DECLARATION: Physics is indifferent to whether "
             "Earth is a rainforest or a sterile rock. STIM is not. "
             "This preference is declared so it cannot be hidden."
