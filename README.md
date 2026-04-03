@@ -90,7 +90,7 @@ if result.is_executable:
 ## Axiom packs
 
 ```python
-# Core: The Eight Truths of Nature (default)
+# Core: The Seven Truths of Nature (default)
 guard = STIMGuard(axiom_pack="core")
 
 # Domain packs (community contributions welcome)
