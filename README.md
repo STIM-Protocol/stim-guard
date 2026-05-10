@@ -161,3 +161,4 @@ See [CONTRIBUTING.md](CONTRIBUTING.md). Physics improvements belong upstream in 
 Apache 2.0. Open for adoption. Attribution required. Nature is the constraint.
 
 *"The roots are deep. The signals are clear."*
+
