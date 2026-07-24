@@ -11,6 +11,7 @@
 <p align="center">
   <a href="https://pypi.org/project/stim-guard/"><img alt="PyPI" src="https://img.shields.io/pypi/v/stim-guard?style=flat&labelColor=0d2818&color=1a4a2e"></a>
   <a href="https://github.com/STIM-Protocol/stim-core"><img alt="STIM Protocol" src="https://img.shields.io/badge/STIM-Layer_0-1a4a2e?style=flat&labelColor=0d2818"></a>
+  <a href="https://github.com/STIM-Protocol/white-paper"><img alt="White Paper" src="https://img.shields.io/badge/White_Paper-v7.0011-1a4a2e?style=flat&labelColor=0d2818"></a>
   <a href="https://github.com/psi-oss/get-physics-done"><img alt="GPD" src="https://img.shields.io/badge/Physics-PSI_GPD-1a4a2e?style=flat&labelColor=0d2818"></a>
   <img alt="License" src="https://img.shields.io/badge/License-Apache_2.0-1a4a2e?style=flat&labelColor=0d2818">
   <img alt="Python" src="https://img.shields.io/badge/Python-3.10+-1a4a2e?style=flat&labelColor=0d2818">
@@ -161,4 +162,5 @@ See [CONTRIBUTING.md](CONTRIBUTING.md). Physics improvements belong upstream in 
 Apache 2.0. Open for adoption. Attribution required. Nature is the constraint.
 
 *"The roots are deep. The signals are clear."*
+
 
