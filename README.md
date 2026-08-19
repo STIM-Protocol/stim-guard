@@ -142,7 +142,7 @@ STIM-Protocol/gpd-framework  ← PSI GPD integration layer
 STIM-Protocol/white-paper    ← arXiv-ready documentation
 ```
 
-Enterprise deployment: [Veraculum AOS](https://veraculum.ai) — STIM Orchestrator, Compliance Dashboard, and Certification.
+Enterprise deployment: [Arboracle AOS](https://arboracle.app) — STIM Orchestrator, Compliance Dashboard, and Certification.
 
 ---
 
