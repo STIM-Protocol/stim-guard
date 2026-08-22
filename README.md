@@ -13,6 +13,7 @@
   <a href="https://github.com/STIM-Protocol/stim-core"><img alt="STIM Protocol" src="https://img.shields.io/badge/STIM-Layer_0-1a4a2e?style=flat&labelColor=0d2818"></a>
   <a href="https://github.com/STIM-Protocol/white-paper"><img alt="White Paper" src="https://img.shields.io/badge/White_Paper-v7.0011-1a4a2e?style=flat&labelColor=0d2818"></a>
   <a href="https://github.com/psi-oss/get-physics-done"><img alt="GPD" src="https://img.shields.io/badge/Physics-PSI_GPD-1a4a2e?style=flat&labelColor=0d2818"></a>
+  <a href="https://github.com/STIM-Protocol/mycelial-brain-mcp"><img alt="MCP" src="https://img.shields.io/badge/Memory-Brain-1a4a2e?style=flat&labelColor=0d2818"></a>
   <img alt="License" src="https://img.shields.io/badge/License-Apache_2.0-1a4a2e?style=flat&labelColor=0d2818">
   <img alt="Python" src="https://img.shields.io/badge/Python-3.10+-1a4a2e?style=flat&labelColor=0d2818">
 </p>
@@ -139,6 +140,7 @@ Lower `val_bpb` (from [karpathy/autoresearch](https://github.com/karpathy/autore
 ```
 STIM-Protocol/stim-core      ← The open specification
 STIM-Protocol/stim-guard     ← This library (pip install stim-guard)
+STIM-Protocol/mycelial-brain-mcp ← MCP memory layer: persistent context for AI agents
 STIM-Protocol/gpd-framework  ← PSI GPD integration layer
 STIM-Protocol/white-paper    ← arXiv-ready documentation
 ```
